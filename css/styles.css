@@ -76,6 +76,8 @@ h3 {
 .iphone {
   width: 60%;
   transform: rotate(25deg);
+  position: absolute;
+  right: 20%;
 }
 
 /* feature-boxes */
@@ -84,7 +86,6 @@ h3 {
   background-color: white;
   z-index: 1;
   position: relative;
-  margin-top: -14%;
 }
 
 .feature-boxes {
