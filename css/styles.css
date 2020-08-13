@@ -2,17 +2,28 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: darkgrey;
+    font-size: .8rem;
+}
 .container-fluid {
   overflow: hidden;
+  padding: 3% 15% 4%;
 }
 
 #title {
   background-color: #ff4c68;
   color: white;
+  z-index: 0;
+  position: relative;
 }
 
 .container-fluid {
   padding: 3% 15%;
+
 }
 
 h1 {
@@ -21,7 +32,22 @@ h1 {
   line-height: 1.5;
   font-weight: bold;
 }
+h2 {
+  font-weight: 600;
+      color: black;
+      font-size: 3rem;
+}
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#testimonials h2 {
+  font-weight: 600;
+      color: white;
+      font-size: 3rem;
+}
 /* navigation */
 .navbar {
   padding: 0 0 4.5rem;
@@ -55,6 +81,10 @@ h1 {
 /* feature-boxes */
 #features {
   padding: 8% 7%;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  margin-top: -14%;
 }
 
 .feature-boxes {
@@ -71,10 +101,7 @@ h1 {
   color: #ff4c68;
 }
 
-.feature-boxes h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
+
 
 .feature-boxes p {
   color: #8f8f8f
@@ -91,11 +118,7 @@ h1 {
   padding: 8% 11% 7%;
 }
 
-#testimonials h2 {
-  font-weight: 600;
-      color: white;
-      font-size: 3rem;
-}
+
 
 .test-profile {
   width: 15%;
@@ -117,4 +140,8 @@ h1 {
 #pricing {
   padding: 9% 10%;
 text-align: center;
+}
+
+.card-deck {
+    padding-top: 4%;
 }
