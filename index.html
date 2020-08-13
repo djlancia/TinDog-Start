@@ -15,12 +15,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/7af7817b54.js" crossorigin="anonymous"></script>
+  <script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
 
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <section id="title">
     <div class="container-fluid">
@@ -41,13 +61,13 @@
               <a class="nav-link" href="#">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Templates</a>
+              <a class="nav-link" href="#testimonials">Reviews</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
 
           </ul>
@@ -109,34 +129,34 @@
   </div>
 
   <!-- Testimonials -->
-    <section id="testimonials">
-<div id="testimonial-slider" class="carousel slide" data-ride="carousel" data-hover="true ">
+  <section id="testimonials">
+    <div id="testimonial-slider" class="carousel slide" data-ride="carousel" data-hover="true ">
 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
 
-        <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-        <img src="images/dog-img.jpg" alt="dog-profile" class="test-profile">
-        <em>Pebbles, New York</em>
+          <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+          <img src="images/dog-img.jpg" alt="dog-profile" class="test-profile">
+          <em>Pebbles, New York</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <img src="images/lady-img.jpg" alt="lady-profile" class="test-profile">
+          <em>Beverly, Illinois</em>
+        </div>
+
+
+      </div>
+
+      <a class="carousel-control-prev" href="#testimonial-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <div class="carousel-item">
-      <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-      <img src="images/lady-img.jpg" alt="lady-profile" class="test-profile">
-      <em>Beverly, Illinois</em>
-    </div>
-
-
-  </div>
-
-  <a class="carousel-control-prev" href="#testimonial-slider" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#testimonial-slider" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
   </section>
 
 
@@ -162,66 +182,66 @@
 
     <div class="row card-deck mb-3 text-center">
 
-<div class="col-lg-4 col-md-6">
-  <div class="card mb-4 shadow-sm">
-    <div class="card-header">
-      <h3>Chihuahua</h3>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-      <ul class="list-unstyled mt-3 mb-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h3>Chihuahua</h3>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
 
-        <li>5 Matches Per Day</li>
-        <li>10 Messages Per Day</li>
-        <li>Unlimited App Usage</li>
-        <li>Help center access</li>
-      </ul>
-      <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
-    </div>
-  </div>
-</div>
-
-
-<div class="col-lg-4 col-md-6 ">
-  <div class="card mb-4 shadow-sm">
-    <div class="card-header">
-      <h3>Labrador</h3>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
-      <ul class="list-unstyled mt-3 mb-4">
-
-        <li>5 Matches Per Day</li>
-        <li>10 Messages Per Day</li>
-        <li>Unlimited App Usage</li>
-        <li>Help center access</li>
-      </ul>
-      <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
-    </div>
-  </div>
-</div>
-
-<div class="col-lg-4">
-  <div class="card mb-4 shadow-sm">
-    <div class="card-header">
-      <h4 class="my-0 font-weight-normal">Mastiff</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$49 <small class="text-muted">/ mo</small></h1>
-      <ul class="list-unstyled mt-3 mb-4">
-        <li>30 users included</li>
-        <li>15 GB of storage</li>
-        <li>Phone and email support</li>
-        <li>Help center access</li>
-      </ul>
-      <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
-    </div>
-  </div>
-</div>
-
-
-
+              <li>5 Matches Per Day</li>
+              <li>10 Messages Per Day</li>
+              <li>Unlimited App Usage</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
+          </div>
+        </div>
       </div>
+
+
+      <div class="col-lg-4 col-md-6 ">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h3>Labrador</h3>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <li>5 Matches Per Day</li>
+              <li>10 Messages Per Day</li>
+              <li>Unlimited App Usage</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Mastiff</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$49 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-dark btn-lg btn-block">Sign up</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
 
   </section>
 
@@ -231,8 +251,8 @@
   <section id="cta">
 
     <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
+    <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple p-2"></i>Download</button>
+    <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play p-2"></i>Download</button>
 
   </section>
 
@@ -240,6 +260,17 @@
   <!-- Footer -->
 
   <footer id="footer">
+
+
+      <a href="#"><i class="social-icon fab fa-twitter"></i></a>
+      <a href="#"><i class="social-icon fab fa-facebook-f"></i></a>
+      <a href="#"><i class="social-icon fab fa-instagram"></i></a>
+      <a href="#"><i class="social-icon fas fa-envelope"></i>
+      </a>
+
+
+
+
 
     <p>© Copyright 2018 TinDog</p>
 
